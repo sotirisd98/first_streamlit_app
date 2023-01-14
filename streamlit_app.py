@@ -39,13 +39,6 @@ except URLError as e:
 
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
-
-# take the json version and normalize it
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# display the normalize json
-streamlit.dataframe(fruityvice_normalized)
 
 streamlit.stop()
 
